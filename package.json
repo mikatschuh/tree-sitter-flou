@@ -1,0 +1,8 @@
+{
+  "name": "tree-sitter-flou",
+  "version": "0.1.0",
+  "main": "bindings/node",
+  "dependencies": {
+    "nan": "^2.14.0"
+  }
+}
