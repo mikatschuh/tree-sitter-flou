@@ -9,13 +9,15 @@
 
 module.exports = grammar({
   name: "flou",
+  extras: ($) => [/\s/, $.comment],
 
   rules: {
     source_file: ($) => repeat(choice($.keyword, $.number, $.identifier)),
 
     keyword: ($) =>
       choice("proc", "if", "loop", "else", "return", "break", "continue"),
-    number: ($) => /\d+/,
+    number: ($) => /\d+/, // /[([\d\_]+[uifc])(0x)()]/,
     identifier: ($) => /[a-zA-Z_]\w*/,
+    comment: ($) => token(seq(/\/\//, /.*/, /\n/)),
   },
 });

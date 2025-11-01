@@ -6,9 +6,7 @@
       "camelcase": "FlouParser",
       "title": "Flou Parser",
       "scope": "source.flou_parser",
-      "file-types": [
-        "f"
-      ],
+      "file-types": ["rx"],
       "injection-regex": "^flou_parser$",
       "class-name": "TreeSitterFlouParser"
     }
